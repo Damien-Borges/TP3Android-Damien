@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.upjv.ccm.tp1damien">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".architecture.CustomApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tp1damien">
+
+        <activity
+            android:name=".chuckNorris.view.ChuckNorrisActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Parent activity means we will have back button in top of activity and go to the specified activity -->
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.FirstActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.MainActivity" />
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.SecondActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.FirstActivity" />
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.RecyclerViewActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.MainActivity" />
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.StringsActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.MainActivity" />
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.ResourceActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.MainActivity" />
+
+        <activity
+            android:name="fr.upjv.ccm.tp1damien.yourFeature.view.ValuesLandActivity"
+            android:parentActivityName="fr.upjv.ccm.tp1damien.yourFeature.view.MainActivity" />
+    </application>
+
+</manifest>
